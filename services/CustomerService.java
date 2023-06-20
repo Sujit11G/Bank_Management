@@ -39,10 +39,11 @@ public class CustomerService {
 
 
 	
-	//=============================toUpdate Customer Details==================
+	//=================================toUpdate Customer Status===========================
+	//=====================================By_Manager_ID===============================
 	
 	public Customer updateCustomerDeta(int id,String status) {
-		customerDao=new CustomerDao();
+		
 	       
 		Customer customer=customerDao.fetchCustomerByID(id);
 		 customer.setStatus(status);
@@ -53,14 +54,7 @@ public class CustomerService {
 	//===============================toFetch Customer Details===============================
 	
 	public Customer getCustomerByID(int id) {
-		
-		Pan pan=panDao.fetchPan(id);
-		customer.setPan(pan);
-		
-		BankAccount account=accountDao.fetchBankAccountByID(id);
-		customer.setBankAccount(account);
-		
-		
+			
 		return customerDao.fetchCustomerByID(id);
 	}
 	//================================toFetch All Customer Details==========================
@@ -70,10 +64,24 @@ public class CustomerService {
 		return customerDao.getAllCustomerData();
 	}
 	
+	//====================================toUpdate_Customer_Data===============================
+	
+
+
+	public Customer updateData(int id,String name,String email) {
+		
+		Customer customer=customerDao.fetchCustomerByID(id);
+		customer.setName(name);
+		customer.setEmail(email);
+		
+		return customerDao.updateCustomerDetails(customer, id);
+		
+	}
 	
 	
 	
 	
+}
 
 	
 	
@@ -94,4 +102,4 @@ public class CustomerService {
 	
 	
 	
-}
+
