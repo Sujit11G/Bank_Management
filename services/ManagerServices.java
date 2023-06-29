@@ -1,10 +1,16 @@
 package com.jsp.services;
 
 import java.util.List;
+
+import com.jsp.dao.BankAccountDao;
+import com.jsp.dao.BankDao;
 import com.jsp.dao.CustomerDao;
 import com.jsp.dao.ManagerDao;
+import com.jsp.dto.Bank;
+import com.jsp.dto.BankAccount;
 import com.jsp.dto.Customer;
 import com.jsp.dto.Manager;
+import com.jsp.dto.Pan;
 
 public class ManagerServices {
 
@@ -126,8 +132,19 @@ public class ManagerServices {
 		return customer;
 	}
 		
+	//================================toDelete_Customer_Data==============================
 	
+	    //================================By_Manager_ID=============================
 	
+	public boolean deleteCustomerByID(int customer_id) {
+		
+	
+		if(manager!=null) {
+		
+               return managerDao.deleteManagerDetails(customer_id);
+		}else return false;		
+		
+	} 
 	
 	
 	

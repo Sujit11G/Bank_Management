@@ -11,7 +11,7 @@ public class toApprove_Customer_By_ID {
 		ManagerServices managerServices=new ManagerServices();
 		
 		
-		 customer=managerServices.approveCustomerByID(2, 2,"Approve");
+		 customer=managerServices.approveCustomerByID(1, 1,"Approve");
 		System.out.println();
 		System.out.println(customer.getStatus());
 		

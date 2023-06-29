@@ -91,7 +91,8 @@ public class Controller {
 		c2.setManager(m2);
 		m2.setCustomer(customers1);
 		
-		
+		bank.setCustomers(customers1);
+		bank.setCustomers(customers);
 		
 		
 	

@@ -78,7 +78,17 @@ public class CustomerService {
 		
 	}
 	
+	//=================================toDelete_Customer_Data==============================
 	
+	public boolean deleteCustomer(int id) {
+		
+		if(id>0) {
+			return customerDao.deleteCustomerDetails(id);
+		}else {
+			System.out.println("Wrong ID");
+			return false;
+		}
+	}
 	
 	
 }
