@@ -19,12 +19,7 @@ public class BankServices {
 
 	}
 	
-	//===================================toFetch Bank Data============================
 	
-	public Manager fetchManagerDataByID( int id) {
-		
-		return bankDao.fetchDataByID(id);
-	}
 	
 	//================================to Fetch All Manager============================
 	
